@@ -125,21 +125,22 @@
 \section{Morse不等式的证明}
 \subsection{一个命题}
 我们先不加证明的指出下面命题，并借此证明Morse不等式。
-\begin{proposition}
+\begin{proposition}\label{property3.3}
 	对于任意$c>0$,存在$T_0>0$使得当$T\geq T_0$时,$\square_{Tf}|_{\Omega^i(M)}$的落在区间$[0,c]$的特征值的个数（计重数）为$m_i,0 \leq i \leq n$.
 \end{proposition}
 
-对于$9 \leq i \leq n$的任意整数$i$,设：
+
+对于$0 \leq i \leq n$的任意整数$i$,设：
 \begin{align*}
 	F_{Tf,i}^{[0,c]}\subset \Omega^i(M)
 \end{align*}
-是$\square_{Tf}|_{\Omega^i(M)}$在$[0,c]$中的特征值对应的特征向量所生成的$m_i$维向量空间。
+是$\square_{Tf}|_{\Omega^i(M)}$在$[0,c]$中的特征值对应的特征向量所生成的向量空间。根据上述命题\ref{property3.3},这个向量空间是$m_i$维的。
 
-注意到下面的事实:
+通过简单的计算，可以注意到下面的事实:
 \begin{align*}
 	[d_{Tf},\square_{Tf}]=[d^*_{Tf},\square_{Tf}]=0
 \end{align*}
-因此$d_{Tf}$和$d_{Tf}^*$对于$F_{Tf,i}^{[0,c]}$而言都是封闭的。($d_{Tf}$把$F_{Tf,i}^{[0,c]}$映射到$F_{Tf,i+1}^{[0,c]}$,$d^*_{Tf}$把$F_{Tf,i}^{[0,c]}$映射到$F_{Tf,i-1}^{[0,c]}$)
+所以$d_{Tf}$和$d_{Tf}^*$对于$F_{Tf,i}^{[0,c]}$而言都是封闭的。($d_{Tf}$把$F_{Tf,i}^{[0,c]}$映射到$F_{Tf,i+1}^{[0,c]}$,$d^*_{Tf}$把$F_{Tf,i}^{[0,c]}$映射到$F_{Tf,i-1}^{[0,c]}$)
 
 因此我们构造了$(\Omega^*(M),d_{Tf})$有限维的子复形:
 \begin{align}
@@ -150,12 +151,101 @@
 \begin{align}
 	\beta_{Tf,i}^{[0,c]}:=\dim (\frac{\ker(d_{Tf}|_{F_{Tf,i}^{[0,c]}})}{\mathrm{Im}(d_{Tf}|_{F_{Tf,{i-1}}^{[0,c]}})})
 \end{align}
-就等于$\mathrm{dim}(\ker(\square_{Tf}|_{\Omega^i(M)}))$,从而等于$\beta_i$.由于$\beta_{Tf,i}^[0,c]$总是小于$m_i$的，因此弱Morse不等式证毕。
+就等于$\mathrm{dim}(\ker(\square_{Tf}|_{\Omega^i(M)}))$,从而等于$\beta_i$.由于$\beta_{Tf,i}^{[0,c]}$总是小于$m_i$的，因此弱Morse不等式证毕。
 
 下面我们说明强Morse不等式。具体写出$F_{Tf,i}^{[0,c]}$的分解:
 \begin{align}
-	\dim(F_{Tf,n}^{[0,c]})=\dim(\ker(d_{Tf}|_{F_{Tf,i}^{[0,c]}}))+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i}^{[0,c]}}))
+	\dim(F_{Tf,n}^{[0,c]})&=\dim(\ker(d_{Tf}|_{F_{Tf,i}^{[0,c]}}))+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i}^{[0,c]}}))\\&=\dim(\frac{\ker(d_{Tf}|_{F_{Tf,i}^{[0,c]}})}{\mathrm{Im}(d_{Tf}|_{{F_{Tf,i-1}}^{[0,c]}})})+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i-1}^{[0,c]}}))+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i}^{[0,c]}}))
 \end{align}
+结合上述分解和命题\ref{property3.3},可以得到:
+\begin{align}
+	&\sum_{j=0}^i (-1)^j m_{i-j}\\=&\sum_{j=0}^i(\beta_{i-j}+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i-j-1}^{[0,c]}}))+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i-j}^{[0,c]}})))\\=& \sum_{j=0}^i (-1)^j \beta_{i-j}+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i}^{[0,c]}}))
+\end{align}
+
+可见这就是强Morse不等式。若$i=n$,可知上式的最右边一项为$0$,于是给出取等条件。
+\subsection{命题\ref{property3.3}的证明:Witten形变算子}
+解析证明的灵魂是命题\ref{property3.3}.为了说明这个命题，我们需要用到不少解析的技巧。
+
+首先做两个记号.对于$T>0$和$f$的临界点$x \in M$,定义
+\begin{align*}
+    \alpha_{x,T}=\int_{U_x}\gamma(|y|^2)\exp(-T|y|^2)dy^1\wedge \dots \wedge dy^n\\
+	\rho_{x,T}=\frac{\gamma(|y|)}{\sqrt{\alpha_{x,T}}}\exp(\frac{-T|y|^2}{2})dy^1\wedge \dots \wedge dy^{n_f(x)}
+\end{align*}
+
+其中$\gamma$是选定的一个光滑函数$\gamma:\R \to \R$。满足$\gamma(x)=1,|x|\leq a,\gamma(x)=0,|x|\geq 2a$.这样的光滑函数的存在性是基础的。
+
+于是在上述记号下，$\rho_{x,T}$是在Hodge范数下的单位向量,且拥有在$U_x$里面的紧支撑集。
+
+固定$T$,从而每个临界点$x$处都存在一个$\rho_{x,T}$.用$E_T$表示这些$\rho_{x,T}$生成的有限维向量空间。(因为$x$的个数是有限的)这个向量空间是Sobolev空间$\mathbb{H}^0(M)$的子空间。其中,$\mathbb{H}^0$是$\Omega^*(M)$结合Hodge内积给出的Hilbert空间.
+
+因此可以考虑正交补$E_T^{\perp}$.
+\begin{align*}
+	\mathbb{H}^0(M)=E_T \oplus E_T^{\perp}
+\end{align*}
+
+再设$p_T$和$p_T^{\perp}$是对应的正交投影。
+
+\begin{definition}[Witten形变算子]
+	定义如下四个算子。
+	\begin{align}
+		D_{T,1}:=p_T D_{Tf}p_T,D_{T,2}:=p_T D_{Tf} p_T^{\perp},D_{T,3}:=p_T^{\perp} D_{Tf}p_T,D_{T,4}:=p_T^{\perp} D_{Tf}p_T^{\perp}
+	\end{align}
+	
+\end{definition}
+
+这四个算子有非常好的估计式:
+\begin{proposition}
+	对于任意$T>0$,$D_{T,1}=0$.
+\end{proposition}
+\begin{proof}
+	设$f$的临界点集合为$\mathrm{zero}(df)$.则对于任何$s \in \mathbb{H}^0(M)$：
+	\begin{align*}
+		p_T s=\sum_{x \in \mathrm{zero}(df)}\langle \rho_{x,T},s\rangle\rho_{x,T}
+	\end{align*}
+	我们代入$D_{Tf}$计算:
+	\begin{align}
+		D_{Tf}(\langle \rho_{x,T},s\rangle\rho_{x,T}) \in \Omega^{n_f(x)-1}(M)\oplus \Omega^{n_f(x)+1}(M)
+	\end{align}
+
+	因为上述结果在$U_x$外全为$0$,因此$D_{Tf}(\langle \rho_{x,T},s\rangle\rho_{x,T})$与$\rho_{y,T}$在$x\neq y$的时候做内积显然为$0$.其次,若$x \neq y$,则根据形式的阶数不相同，也得到内积为$0$.综上:
+	\begin{align}
+		p_T D_{Tf}(\langle \rho_{x,T},s\rangle\rho_{x,T})=0
+	\end{align}
+\end{proof}
+\begin{proposition}
+	存在常数$T_1>0$,使得对于任意的$s \in (E_T)^{\perp} \cap \mathbb{H}^1(M)$,$s' \in E_T$和$T \geq T_1$,有:
+	\begin{align}
+		\|D_{T,2}s\|_0\leq 
+	\frac{\|s\|_0}{T},\|D_{T,3}s'\|_0\leq \frac{\|s'\|_0}{T}
+	\end{align}
+\end{proposition}
+\begin{proof}
+	容易验证$D_3$是$D_2$的形式伴随。
+	\begin{align}
+		\langle D_2s,s'\rangle &=\langle p_TD_{Tf}p_T^{\perp}s,s'\rangle\\&=\langle p_T^{\perp}s,D_{Tf}p_Ts'\rangle\\&=\langle s,p_T^{\perp}D_{Tf}p_Ts'\rangle=\langle s,D_{T,3}s'\rangle
+	\end{align}
+	因此只需要验证第一个不等式。直接计算有
+	\begin{align}
+		D_{T,2}s=\sum_{x \in \mathrm{zero}(df)}\langle \rho_{x,T},D_{Tf}s\rangle\rho_{x,T}=\sum_{x \in \mathrm{zero}(df)}\langle D_{Tf}\rho_{x,T},s\rangle\rho_{x,T}=\sum_{x\in \mathrm{zero}(df)}\int_{U_x}D_{Tf}\rho_{x,t} \wedge (*s) dv_p \rho_{x,T}
+	\end{align}
+	根据$\rho_{x,T}$的构造,我们不难发现上述积分只在$|y|\in [a,2a]$的区间上有意义。($\ker D_{Tf}=\ker D_{Tf}^2$.)而此时上述积分的值就取决于$\|s\|_0$和$T$.具体可以描述为:
+
+	存在$T_0>0$,$C_1>0$,$C_2>0$,使得:
+	\begin{align}
+		\|D_{T,2}s\|_0 \leq C_1T^{n/2}\exp(-C_2T)\|s\|_0
+	\end{align}
+	于是命题得证。
+	\end{proof}
+\begin{proposition}
+	存在常数$T_2>0$,$C>0$使得对于任何的$s \in E_T^\perp \cap \mathbb{H}^1(M)$和$T\geq T_2$,有:
+	\begin{align}
+		\|D_{Tf}s\|_0\geq C_2\sqrt{T}\|s\|_0
+	\end{align}
+\end{proposition}
+\begin{proof}
+	参照参考文献84页。
+\end{proof}
+
 \ifx\allfiles\undefined
 	
 	% 如果有这一部分的参考文献的话，在这里加上

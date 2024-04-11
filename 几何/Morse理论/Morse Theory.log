@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.3.26)  20 MAR 2024 22:31
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.3.26)  8 APR 2024 12:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Github Project/Math-Notes-of-Tsechi/几何/Morse理论/Morse Theory"
-(c:/Github Project/Math-Notes-of-Tsechi/几何/Morse理论/Morse Theory.tex
+**"c:/Github Project/Geometry/几何/Morse理论/Morse Theory"
+(c:/Github Project/Geometry/几何/Morse理论/Morse Theory.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (./package/fancy-book.cls
 
@@ -1628,11 +1628,42 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 124.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 129.
+(mdframed)              on input line 128.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 130.
- [10]) [11] (./Morse Theory.aux (./title.aux) (./1.aux) (./2.aux) (./3.aux))
+ [10]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 188.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 194.
+Package mdframed Info: Not enough space on this page on input line 194.
+ [11]
+Package mdframed Info: Not enough space on this page on input line 194.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 198.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 199.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 216.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 221.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 240.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 244.
+Package mdframed Info: Not enough space on this page on input line 244.
+ [12]
+Package mdframed Info: Not enough space on this page on input line 244.
+) [13] (./Morse Theory.aux (./title.aux) (./1.aux) (./2.aux) (./3.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1646,12 +1677,12 @@ Package logreq Info: Writing requests to '"Morse Theory".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43301 strings out of 476683
- 939718 string characters out of 5807575
- 2758727 words of memory out of 5000000
- 62665 multiletter control sequences out of 15000+600000
+ 43318 strings out of 476683
+ 940067 string characters out of 5807575
+ 2759242 words of memory out of 5000000
+ 62682 multiletter control sequences out of 15000+600000
  527362 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 123i,14n,127p,1042b,4062s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 123i,14n,127p,1030b,4063s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Morse Theory.pdf (12 pages).
+Output written on Morse Theory.pdf (14 pages).
