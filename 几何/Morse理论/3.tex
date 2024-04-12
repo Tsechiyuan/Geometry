@@ -2,8 +2,6 @@
 
 	% 如果有这一部分另外的package，在这里加上
 	% 没有的话不需要
-	
-	\begin{document}
 \else
 \fi
 \chapter{Morse不等式的解析证明}
@@ -102,7 +100,9 @@
 \end{align}
 其中$n_f(x)$是$f$在$p$处的指数。设$e_i=\frac{\partial}{\partial y^i}$是$TU_x$的定向标准正交基础,则在$U_x$上,有：
 \begin{align}
+\begin{split}
 	\square_{Tf}&=-\sum_{i=1}^n (\frac{\partial}{\partial y^i})^2-nT+T^2\|y\|^2+T\sum_{i=1}^{n_f(x)}(1-c(e_i)\hat{c}(e_i))+T\sum_{i=n_f(x)+1}^n(1+c(e_i)\hat{c}(e_i))\\&=-\sum_{i=1}^n (\frac{\partial}{\partial y^i})^2-nT+T^2\|y\|^2+2T(\sum_{i=1}^{n_f(x)}i_{e_i}e_i^*\wedge+\sum_{i=1}^{n_f(x)+1}e_i^*\wedge i_{e_i})
+\end{split}	
 \end{align}
 
 不难发现算子:
@@ -155,15 +155,20 @@
 
 下面我们说明强Morse不等式。具体写出$F_{Tf,i}^{[0,c]}$的分解:
 \begin{align}
-	\dim(F_{Tf,n}^{[0,c]})&=\dim(\ker(d_{Tf}|_{F_{Tf,i}^{[0,c]}}))+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i}^{[0,c]}}))\\&=\dim(\frac{\ker(d_{Tf}|_{F_{Tf,i}^{[0,c]}})}{\mathrm{Im}(d_{Tf}|_{{F_{Tf,i-1}}^{[0,c]}})})+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i-1}^{[0,c]}}))+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i}^{[0,c]}}))
+\begin{split}	\dim(F_{Tf,n}^{[0,c]})&=\dim(\ker(d_{Tf}|_{F_{Tf,i}^{[0,c]}}))+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i}^{[0,c]}}))\\&=\dim(\frac{\ker(d_{Tf}|_{F_{Tf,i}^{[0,c]}})}{\mathrm{Im}(d_{Tf}|_{{F_{Tf,i-1}}^{[0,c]}})})+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i-1}^{[0,c]}}))+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i}^{[0,c]}}))
+\end{split}
 \end{align}
 结合上述分解和命题\ref{property3.3},可以得到:
-\begin{align}
-	&\sum_{j=0}^i (-1)^j m_{i-j}\\=&\sum_{j=0}^i(\beta_{i-j}+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i-j-1}^{[0,c]}}))+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i-j}^{[0,c]}})))\\=& \sum_{j=0}^i (-1)^j \beta_{i-j}+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i}^{[0,c]}}))
-\end{align}
+    \begin{align}
+	\begin{split}
+		&\sum_{j=0}^i (-1)^j m_{i-j}\\
+   =&\sum_{j=0}^i(\beta_{i-j}+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i-j-1}^{[0,c]}}))+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i-j}^{[0,c]}})))\\
+   =& \sum_{j=0}^i (-1)^j \beta_{i-j}+\dim(\mathrm{Im}(d_{Tf}|_{F_{Tf,i}^{[0,c]}}))
+	\end{split}
+   \end{align}
 
 可见这就是强Morse不等式。若$i=n$,可知上式的最右边一项为$0$,于是给出取等条件。
-\subsection{命题\ref{property3.3}的证明:Witten形变算子}
+\subsection{Witten形变算子}
 解析证明的灵魂是命题\ref{property3.3}.为了说明这个命题，我们需要用到不少解析的技巧。
 
 首先做两个记号.对于$T>0$和$f$的临界点$x \in M$,定义
@@ -221,13 +226,18 @@
 \end{proposition}
 \begin{proof}
 	容易验证$D_3$是$D_2$的形式伴随。
-	\begin{align}
-		\langle D_2s,s'\rangle &=\langle p_TD_{Tf}p_T^{\perp}s,s'\rangle\\&=\langle p_T^{\perp}s,D_{Tf}p_Ts'\rangle\\&=\langle s,p_T^{\perp}D_{Tf}p_Ts'\rangle=\langle s,D_{T,3}s'\rangle
+    \begin{align}
+	\begin{split}
+		\langle D_2s,s'\rangle &=\langle p_TD_{Tf}p_T^{\perp}s,s'\rangle \\
+	 &=\langle p_T^{\perp}s,D_{Tf}p_Ts'\rangle\\
+	 &=\langle s,p_T^{\perp}D_{Tf}p_Ts'\rangle=\langle s,D_{T,3}s'\rangle
+	\end{split}
 	\end{align}
 	因此只需要验证第一个不等式。直接计算有
-	\begin{align}
+    \begin{align}
 		D_{T,2}s=\sum_{x \in \mathrm{zero}(df)}\langle \rho_{x,T},D_{Tf}s\rangle\rho_{x,T}=\sum_{x \in \mathrm{zero}(df)}\langle D_{Tf}\rho_{x,T},s\rangle\rho_{x,T}=\sum_{x\in \mathrm{zero}(df)}\int_{U_x}D_{Tf}\rho_{x,t} \wedge (*s) dv_p \rho_{x,T}
 	\end{align}
+	
 	根据$\rho_{x,T}$的构造,我们不难发现上述积分只在$|y|\in [a,2a]$的区间上有意义。($\ker D_{Tf}=\ker D_{Tf}^2$.)而此时上述积分的值就取决于$\|s\|_0$和$T$.具体可以描述为:
 
 	存在$T_0>0$,$C_1>0$,$C_2>0$,使得:
@@ -235,7 +245,7 @@
 		\|D_{T,2}s\|_0 \leq C_1T^{n/2}\exp(-C_2T)\|s\|_0
 	\end{align}
 	于是命题得证。
-	\end{proof}
+\end{proof}
 \begin{proposition}
 	存在常数$T_2>0$,$C>0$使得对于任何的$s \in E_T^\perp \cap \mathbb{H}^1(M)$和$T\geq T_2$,有:
 	\begin{align}
@@ -245,6 +255,78 @@
 \begin{proof}
 	参照参考文献84页。
 \end{proof}
+\subsection{$D_{Tf}$和$\square_{Tf}$的特征值和特征空间}
+现在对于任意的正整数$c>0$,设$E_T(c)$表示$D_{Tf}$在$[-c,c]$中的特征值所对应的特征空间的直和.我们需要用到$E_T(c)$下面的两个性质。
+\begin{proposition}
+	$E_T(c)$是$\mathbb{H}^0(M)$有限维的子空间。
+\end{proposition}
+\begin{proof}
+	By 参考文献(spin geometry)196页，只需要验证$D_{Tf}$是自伴的椭圆算子。而形变本身不改变$D$的椭圆性和自伴性。
+\end{proof}
+\begin{proposition}
+	$E_T(c)$同时也是$\square_{Tf}$在$[0,c^2]$的中的特征值所对应的特征空间的直和。
+\end{proposition}
+\begin{proof}
+	设$\square_{Tf}$的特征值为$c^2$的特征空间为$E_c$.将$D_{Tf}$视作有限维空间$E_c$上的算子,则$D_{Tf}^2=c^2\mathrm{Id}$.从而$D_{Tf}$在$E_c$可以对角化,且有特征值$-c$和$c$.因此$E_c$是$D_{Tf}$以$-c$和$c$为特征值的特征空间的直和。从而命题得证。
+\end{proof}
+
+记$P_T(c)$是$\mathbb{H}^0(M)$到$E_T(c)$的正交投影算子。下面的引理给出了$E_T$和$E_T(c)$的估计:
+\begin{lemma}\label{lem:vertical}
+	存在常数$C>0$,$T_0>0$,使得对于任何的$T\geq T_0$,和任意的$\sigma \in E_T$,有:
+	\begin{align}
+		\|P_T(c)\sigma-\sigma\|_0 \leq \frac{C}{T}\|\sigma\|_0
+	\end{align}
+\end{lemma}
+设$T \to +\infty$,此时可以看出$P_T(c)\sigma$和$\sigma$相差很小。此时可以近似的研究$E_T$和$E_T(c)
+$的关系。
+\begin{proof}
+	令$\delta=\{\lambda \in \C:\|\lambda\|=c\}$是逆时针定向的圆周。对于任意的$\lambda \in \delta$,$T\geq T_1+T_2$和$s \in \mathbb{H}^1(M)$,有:
+	\begin{align}
+		\begin{split}
+			&{\quad}\|(\lambda-D_{Tf})s_0\|_0 \\
+			&\geq \frac{1}{2}\|\lambda p_T s-D_{T,2}p_T^{\perp}s\|_0+\frac{1}{2}\|\lambda p_T^{\perp}s-D_{T,3}p_Ts-D_{T,4}p_T^{\perp}s\|_0\\
+			&\geq \frac{1}{2}((c-\frac{1}{T})\|p_T s\|_0+(C_2\sqrt{T}-c-\frac{1}{T})\|p_T^{\perp}s\|_0)
+		\end{split}
+	\end{align}
+	其中第一个不等式利用了正交分解,第二个不等式利用上一节的三个命题。
+
+	上述估计式说明算子$\lambda-D_{Tf}$具有一定的下界——取$T$足够大。即存在$T_3 \geq T_1+T_2$和$C>0$使得对于任意的$T\geq T_3$和$s \in \mathrm{H}^1(M)$有:
+	\begin{align}
+		\|(\lambda-D_{Tf})s\|_0\geq C\|s\|_0
+	\end{align}
+
+	因此对于任意的$T>T_3$,$\lambda \in \delta$,有:
+	\begin{align}
+		\lambda-D_{Tf}:\mathbb{H}^1(M)\to \mathbb{H}^0(M)
+	\end{align}
+	可逆。
+
+	从而预解式$(\lambda-D_{Tf})^{-1}$良定。依据算子理论的谱定理:参考文献。
+	\begin{align}
+		P_T(c)\sigma-\sigma=\frac{1}{2\pi \sqrt{-1}}\int_{\delta}((\lambda-D_{Tf})^{-1}-\lambda^{-1})\sigma d\lambda
+	\end{align}
+
+	另外我们也有:
+	\begin{align}
+		((\lambda-D_{Tf})^{-1}-\lambda^{-1})\sigma=\lambda^{-1}(\lambda-D_{Tf})^{-1}D_{T,3}\sigma
+	\end{align}
+	上述式子只需要利用$D_{T,1}=0$即可。同时,对于任意的$T\geq T_3$,$\sigma \in E_T$,有:
+	\begin{align}
+		\|(\lambda-D_{Tf})^{-1}D_{T,3}\sigma\|_0 \leq C^{-1}\|D_{T,3}\sigma\|_0\leq \frac{1}{CT}\|\sigma\|_0
+	\end{align}
+\end{proof}
+\subsection{命题的证明}
+现在我们准备好了所有的内容,以证明Morse不等式。
+
+考虑引理\ref{lem:vertical}作用在所有的$\rho_{x,T}$上.因为这样的$\rho_{x,T}$是有限个数的,从而存在足够大$T$使得$p_T(c)\rho_{x,T}$线性无关。(用范数估计)
+
+\begin{proposition}
+	在$T$足够大的时候,有:
+	\begin{align}
+\mathrm{dim}E_T(c)=\mathrm{dim}E_T=\sum_{i=0}^n m_i
+	\end{align}
+	并且$E_T(c)$由$P_T(c)\rho_{x,T}$生成.
+\end{proposition}
 
 \ifx\allfiles\undefined
 	

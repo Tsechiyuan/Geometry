@@ -14,4 +14,6 @@
 \contentsline {section}{\numberline {3.2}算子在临界点的分析}{9}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Morse不等式的证明}{10}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}一个命题}{10}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}命题\ref {property3.3}的证明:Witten形变算子}{11}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.2}Witten形变算子}{11}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}$D_{Tf}$和$\square _{Tf}$的特征值和特征空间}{13}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}命题的证明}{14}{subsection.3.3.4}%

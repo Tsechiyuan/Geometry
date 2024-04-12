@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.3.26)  8 APR 2024 12:03
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.3.26)  13 APR 2024 01:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1311,7 +1311,7 @@ File: GoudyIn.fd 2003/04/02 Font definition file for U/GoudyIn
 ))
 
 LaTeX Font Warning: Font shape `TU/lmr/m/scit' undefined
-(Font)              using `TU/lmr/m/scsl' instead on input line 19.
+(Font)              using `TU/lmr/m/scsl' instead on input line 20.
 
 (c:/texlive/2023/texmf-dist/tex/latex/datetime2/datetime2.sty
 Package: datetime2 2021/03/21 v1.5.7 (NLCT) date and time formats
@@ -1329,26 +1329,26 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
  (./Morse Theory.aux (./title.aux) (./1.aux) (./2.aux) (./3.aux))
 \openout1 = `"Morse Theory.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
  (c:/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx
@@ -1364,9 +1364,9 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file '"Morse Theory".bbl' not found.
 
 No file "Morse Theory".bbl.
-Package biblatex Info: Reference section=0 on input line 35.
-Package biblatex Info: Reference segment=0 on input line 35.
-Package hyperref Info: Link coloring ON on input line 35.
+Package biblatex Info: Reference section=0 on input line 36.
+Package biblatex Info: Reference segment=0 on input line 36.
+Package hyperref Info: Link coloring ON on input line 36.
 (./Morse Theory.out) (./Morse Theory.out)
 \@outlinefile=\write5
 \openout5 = `"Morse Theory.out"'.
@@ -1591,16 +1591,16 @@ Chapter 2.
 Chapter 3.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
+(mdframed)              on input line 11.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
 (mdframed)              on input line 13.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 15.
+(mdframed)              on input line 40.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 42.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 46.
+(mdframed)              on input line 44.
 [8
 
 
@@ -1609,16 +1609,16 @@ Package mdframed Info: mdframed detected package amsthm
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
+(mdframed)              on input line 53.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
 (mdframed)              on input line 55.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 57.
+(mdframed)              on input line 80.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 82.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 87.
+(mdframed)              on input line 85.
  [9]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1635,35 +1635,95 @@ Package mdframed Info: mdframed detected package amsthm
  [10]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 188.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 194.
-Package mdframed Info: Not enough space on this page on input line 194.
- [11]
-Package mdframed Info: Not enough space on this page on input line 194.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 198.
+(mdframed)              on input line 193.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 199.
+Package mdframed Info: Not enough space on this page on input line 199.
+ [11]
+Package mdframed Info: Not enough space on this page on input line 199.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 216.
+(mdframed)              on input line 203.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 204.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 221.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 240.
+(mdframed)              on input line 226.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 244.
-Package mdframed Info: Not enough space on this page on input line 244.
+(mdframed)              on input line 250.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 254.
+Package mdframed Info: Not enough space on this page on input line 254.
  [12]
-Package mdframed Info: Not enough space on this page on input line 244.
-) [13] (./Morse Theory.aux (./title.aux) (./1.aux) (./2.aux) (./3.aux))
+Package mdframed Info: Not enough space on this page on input line 254.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12.045> on input line 258.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 258.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 258.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 258.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 258.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 258.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 258.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\square' on input line 258.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 258.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 258.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 261.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 262.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 267.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 268.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 274.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 279.
+[13]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 324.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 329.
+) [14] (./Morse Theory.aux (./title.aux) (./1.aux) (./2.aux) (./3.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1677,12 +1737,12 @@ Package logreq Info: Writing requests to '"Morse Theory".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43318 strings out of 476683
- 940067 string characters out of 5807575
- 2759242 words of memory out of 5000000
- 62682 multiletter control sequences out of 15000+600000
- 527362 words of font info for 100 fonts, out of 8000000 for 9000
+ 43359 strings out of 476683
+ 940731 string characters out of 5807575
+ 2759760 words of memory out of 5000000
+ 62715 multiletter control sequences out of 15000+600000
+ 539398 words of font info for 115 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 123i,14n,127p,1030b,4063s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 123i,17n,127p,1030b,4063s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Morse Theory.pdf (14 pages).
+Output written on Morse Theory.pdf (15 pages).
