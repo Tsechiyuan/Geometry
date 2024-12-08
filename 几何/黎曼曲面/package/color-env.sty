@@ -9,27 +9,35 @@
 \RequirePackage[framemethod=TikZ]{mdframed}  %% for colored framed boxes
 \RequirePackage{framed}  %% for problem 
 \RequirePackage{amsthm}  %% for theorem environment 
-
+\RequirePackage{enumerate}   
 %%%%%%%%%%%%%%%%%%
 %  Environments  %
 %%%%%%%%%%%%%%%%%%
 %command
+\newcommand{\U}{\mathcal{U}}
 \newcommand{\id}{\mathrm{id}}
 \newcommand{\Hom}{\mathrm{Hom}}
 \newcommand{\Ext}{\mathrm{Ext}}
 \newcommand{\Tor}{\mathrm{Tor}}
 \newcommand{\N}{\mathbb{N}}
+\newcommand{\OO}{\mathcal{O}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\PP}{\mathbb{P}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\HH}{\mathbb{H}}
 \newcommand{\RP}{\mathbb{RP}}
 \newcommand{\dd}{\mathrm{d}}
 \newcommand{\HdR}[1]{H_{\mathrm{dR}}^#1}
+\newcommand{\ii}{\sqrt{-1}}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
 \newcommand{\pa}[3][]{
 	\frac{\partial^{#1} #2}{\partial {#3}^{#1}}
 	}
+\newcommand{\bpa}{\bar{\partial}}
+\newcommand{\npa}{\partial}
 %%%%%%%% Problem %%%%%%%%%%%%%
 \colorlet{shadecolor}{orange!12}
 \newtheorem{prob}{Problem}
@@ -113,6 +121,30 @@
 	}
 	\begin{mdframed}[]\relax%
 		}{\end{mdframed}}
+		%%%%%%%%%%%%% Remark %%%%%%%%%%%%%%%
+\newcounter{rem}[section]\setcounter{rem}{0}
+\renewcommand{\therem}{\arabic{chapter}.\arabic{section}.\arabic{rem}}
+\newenvironment{remark}[1][]{%
+	\refstepcounter{rem}%
+	\ifstrempty{#1}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,fill=orange!20]
+				{\strut Remark~\therem};}}
+	}%
+	{\mdfsetup{%
+			frametitle={%
+				\tikz[baseline=(current bounding box.east),outer sep=0pt]
+				\node[anchor=east,rectangle,fill=orange!20]
+				{\strut Definition~\therem:~#1};}}%
+	}%
+	\mdfsetup{innertopmargin=10pt,linecolor=red!25,%
+		linewidth=2pt,topline=true,%
+		frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+	}
+	\begin{mdframed}[]\relax%
+		}{\end{mdframed}}
 %%%%%%%%%%%%%% COROLLARY %%%%%%%%%%%%%%%%%%
 \newcounter{cor}[section]\setcounter{cor}{0}
 \renewcommand{\thecor}{\arabic{chapter}.\arabic{section}.\arabic{cor}}
@@ -147,13 +179,13 @@
 	{\mdfsetup{%
 			frametitle={%
 				\tikz[baseline=(current bounding box.east),outer sep=0pt]
-				\node[anchor=east,rectangle,fill=green!25]
+				\node[anchor=east,rectangle,fill=blue!25]
 				{\strut Proposition~\theprop};}}
 	}%
 	{\mdfsetup{%
 			frametitle={%
 				\tikz[baseline=(current bounding box.east),outer sep=0pt]
-				\node[anchor=east,rectangle,fill=green!25]
+				\node[anchor=east,rectangle,fill=blue!25]
 				{\strut Proposition~\theprop:~#1};}}%
 	}%
 	\mdfsetup{innertopmargin=10pt,linecolor=green!25,%
@@ -171,13 +203,13 @@
 	{\mdfsetup{%
 			frametitle={%
 				\tikz[baseline=(current bounding box.east),outer sep=0pt]
-				\node[anchor=east,rectangle,fill=red!25]
+				\node[anchor=east,rectangle,fill=green!25]
 				{\strut Example~\theexa};}}
 	}%
 	{\mdfsetup{%
 			frametitle={%
 				\tikz[baseline=(current bounding box.east),outer sep=0pt]
-				\node[anchor=east,rectangle,fill=red!25]
+				\node[anchor=east,rectangle,fill=green!25]
 				{\strut Example~\theexa:~#1};}}%
 	}%
 	\mdfsetup{innertopmargin=10pt,linecolor=red!25,%
