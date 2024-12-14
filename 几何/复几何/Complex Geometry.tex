@@ -1,0 +1,71 @@
+\documentclass[12pt]{elegantbook}
+
+\title{Complex Geometry}
+\subtitle{Some Elementary Notes}
+
+\author{Natsume Ryo}
+\institute{Chern Institue of Mathematical}
+\date{\today}
+\version{1.0}
+\bioinfo{Bio}{Information}
+
+\extrainfo{\textcolor{red}{\bfseries Caution: This template will no longer be maintained since January 1st, 2023.}}
+
+\logo{logo-blue.png}
+\cover{cover.jpg}
+
+% modify the color in the middle of titlepage
+\definecolor{customcolor}{RGB}{32,178,170}
+\colorlet{coverlinecolor}{customcolor}
+\usepackage{cprotect}
+
+\addbibresource[location=local]{reference.bib} % bib
+
+\begin{document}
+
+\maketitle
+
+\frontmatter
+\tableofcontents
+
+\mainmatter
+\chapter{Complex Manifold}
+
+\chapter{K\"{a}hler Manifold}
+\section{Difinition and K\"{a}hler Identity}
+This section we introduce the basic concept of K\"{a}hler manifold and K\"{a}hler Identity.
+
+Let $X$ be a complex manifold.We denote the induced almost complex structure by $I$. The following definition is natural.
+
+\begin{definition}
+A Riemann metric $g$ on $X$ is an hermitian structure on X if for any point $x \in X$,the scalar product $g_x$ on $T_x X$ is compatible with the almost complex structure $I_x$. That is, $g_x(I_x w,T_x v)=g_x(w,v)$ for any $x \in X,w,v \in T_x X$.
+
+Then the induced form $\omega:=g(I(),())$ is called the fundamental form.
+\end{definition}
+
+\chapter{Vector Bundles}
+
+\chapter{Applications of Cohomology}
+
+
+
+\nocite{en2,en3}
+
+\printbibliography[heading=bibintoc, title=\ebibname]
+\appendix
+
+
+\chapter{Sheaf Cohomology}
+
+This appendix covers some of the basic mathematics used in econometrics. We briefly discuss the properties of summation operators, study the properties of linear and some nonlinear equations, and review the ratios and percentages. We also introduce some special functions that are common in econometrics applications, including quadratic functions and natural logarithms. The first four sections require only basic algebraic techniques. The fifth section briefly reviews differential Calculus Although Calculus is not necessary to understand much of this book, it is used in some of the end-of-chapter appendices and in some of the more advanced topics in part 3.
+
+\section{Summation Operator and Description Statistics}
+
+\textbf{Summation Operator} is an abbreviation used to express the summation of numbers, it plays an important role in statistics and econometrics analysis. If $\{x_i: i=1, 2, \ldots, n\}$ is a sequence of $n$ numbers, the summation of the $n$ numbers is:
+
+\begin{equation}
+\sum_{i=1}^n x_i \equiv x_1 + x_2 +\cdots + x_n
+\end{equation}
+
+
+\end{document}
